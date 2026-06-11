@@ -1,0 +1,32 @@
+@custom-variant dark (&:where(.dark, .dark *));
+@import "tailwindcss";
+
+
+/* custom dark theme changes */
+.dark {
+  --bg-color: #1a202c; /* Dark background */
+  --text-color: #f7fafc; /* Light text */
+  --primary-color: #2b6cb0; /* Primary color for buttons and links */
+  --secondary-color: #4a5568; /* Secondary color for borders and accents */
+}
+
+
+
+/* Global body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  min-height: 100vh;
+}
+
+.reg{
+  display: flex;
+  padding: 10px;
+  justify-content: left;
+  flex-direction: column;
+}
