@@ -53,11 +53,38 @@ const SignUp = ({ close, openLogin }) => {
   };
 
   return (
-    <div className='h-screen fixed inset-0 z-50 bg-black/60 flex justify-center items-center' onClick={close}>
+    <div 
+      className='h-screen fixed inset-0 z-50 bg-black/60 flex justify-center items-center' 
+      onClick={close}>
 
-      <div className='bg-white w-[24%] h-auto rounded-2xl p-5' onClick={(e) => e.stopPropagation()}>
+      <div 
+        className='
+          w-full max-w-md
+          bg-white dark:bg-slate-900
+          text-gray-800 dark:text-slate-100
+          rounded-2xl
+          p-5 md:p-6
+          shadow-2xl
+          border border-gray-200 dark:border-slate-700
+        ' 
+        onClick={(e) => e.stopPropagation()}>
 
-        <h1 className='flex justify-between items-center text-2xl font-bold text-left'>Create Account <X onClick={close} className='cursor-pointer' /></h1>
+        <h1 
+          className='flex justify-between items-center text-2xl font-bold text-left'
+        >
+          Create Account 
+          <X 
+            onClick={close} 
+            className='
+              cursor-pointer
+              text-gray-500
+              hover:text-black
+              dark:text-slate-400
+              dark:hover:text-white
+              transition
+            ' 
+          />
+        </h1>
 
         <div className='mt-3'>
           <form onSubmit={handleSignUp}>
@@ -74,33 +101,95 @@ const SignUp = ({ close, openLogin }) => {
 
             <div className='reg'>
               <label className='block text-sm font-medium text-gray-700'>Email Address</label>
-              <input className='bg-black/5 p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-black/40 focus:shadow-xl transition' 
+              <input 
                 type='email' 
                 placeholder='Enter your Email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className='
+                w-full
+                px-4 py-3
+                rounded-xl
+                bg-gray-100
+                dark:bg-slate-800
+                dark:text-white
+                dark:placeholder:text-slate-400
+                border border-transparent
+                focus:outline-none
+                focus:ring-2
+                focus:ring-slate-400
+                dark:focus:ring-slate-500
+                transition
+                ' 
                 required
               />
             </div>
 
             <div className='reg'>
               <label className='block text-sm font-medium text-gray-700'>Password</label>
-              <input className='bg-black/5 p-2  rounded-xl focus:outline-none focus:ring-2 focus:ring-black/40 focus:shadow-xl transition' 
+              <input 
                 type='password' 
                 placeholder='Create a Password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                className='
+                w-full
+                px-4 py-3
+                rounded-xl
+                bg-gray-100
+                dark:bg-slate-800
+                dark:text-white
+                dark:placeholder:text-slate-400
+                border border-transparent
+                focus:outline-none
+                focus:ring-2
+                focus:ring-slate-400
+                dark:focus:ring-slate-500
+                transition
+                ' 
                 required
               />
             </div>
 
             <div className='text-center m-3'>
-              <button className='bg-black text-white py-2 px-4 rounded-xl hover:bg-gray-800 transition cursor-pointer w-full'>Sign Up</button>
+              <button 
+                className='
+                  w-full
+                  rounded-xl
+                  bg-black
+                  dark:bg-slate-100
+                  text-white
+                  dark:text-slate-900
+                  hover:bg-gray-800
+                  dark:hover:bg-white
+                  transition
+                  font-medium
+                  cursor-pointer
+                  py-3
+                '
+              >
+                Sign Up
+              </button>
             </div>
 
             <div className='p-5 text-center'>
-              <p>Already have an account? 
-                <span onClick={() => openLogin()} className='font-bold hover:underline cursor-pointer'>Log in</span>
+              <p 
+                className='text-sm text-gray-600 dark:text-slate-400'
+              >
+                Already have an account? 
+                <span 
+                  onClick={() => openLogin()} 
+                  className='
+                    ml-1
+                    cursor-pointer
+                    hover:underline
+                    text-black
+                    dark:text-white
+                    font-semibold
+                  '
+                >
+                  Log in
+                </span>
               </p>
             </div>
 
