@@ -89,7 +89,7 @@ const SignUp = ({ close, openLogin }) => {
         <div className='mt-3'>
           <form onSubmit={handleSignUp}>
             <div className='reg'>
-              <label className='block text-sm font-medium text-gray-700'>Full Name</label>
+              <label className='block text-sm font-medium'>Full Name</label>
               <input className='bg-black/5 p-2  rounded-xl focus:outline-none focus:ring-2 focus:ring-black/40 focus:shadow-xl transition'
                 placeholder='Enter your Name'
                 value={name}
@@ -100,7 +100,7 @@ const SignUp = ({ close, openLogin }) => {
             </div>
 
             <div className='reg'>
-              <label className='block text-sm font-medium text-gray-700'>Email Address</label>
+              <label className='block text-sm font-medium'>Email Address</label>
               <input 
                 type='email' 
                 placeholder='Enter your Email'
@@ -126,7 +126,7 @@ const SignUp = ({ close, openLogin }) => {
             </div>
 
             <div className='reg'>
-              <label className='block text-sm font-medium text-gray-700'>Password</label>
+              <label className='block text-sm font-medium'>Password</label>
               <input 
                 type='password' 
                 placeholder='Create a Password'
