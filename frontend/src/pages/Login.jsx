@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = ({ close, openSignUp }) => {
-  
+
   const { setUser } = useAuth();
 
   // 🔹 Store input values
@@ -54,13 +54,37 @@ const Login = ({ close, openSignUp }) => {
 
   return (
     <div>
-      <div className="fixed h-screen inset-0 bg-black/40 flex justify-center items-center" onClick={close}>
+      <div
+        className="fixed h-screen inset-0 bg-black/50 flex justify-center items-center p-10"
+        onClick={close}>
 
-        <div className="bg-white w-[24%] rounded-2xl p-5" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="
+          w-full max-w-md
+          bg-white dark:bg-slate-900
+          text-gray-800 dark:text-slate-100
+          rounded-2xl
+          p-5 md:p-6
+          shadow-2xl
+          border border-gray-200 dark:border-slate-700
+          "
+          onClick={(e) => e.stopPropagation()}>
 
           <div className="flex justify-between items-center mb-2 p-2">
-            <h1 className="font-bold text-2xl">Login</h1>
-            <X onClick={close} className="cursor-pointer" />
+            <h1
+              className="font-bold text-2xl">
+              Login
+            </h1>
+            <X
+              onClick={close}
+              className="cursor-pointer
+               text-gray-500
+               hover:text-black
+               dark:text-slate-400
+               dark:hover:text-white
+                transition
+              "
+            />
           </div>
 
           <form onSubmit={handleLogin}>
@@ -72,7 +96,21 @@ const Login = ({ close, openSignUp }) => {
                 placeholder="Enter your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className='bg-black/5 p-2 rounded-xl w-full'
+                className='
+                  w-full
+                  rounded-xl
+                  bg-gray-100
+                  dark:bg-slate-800
+                  dark:text-white
+                  dark:placeholder:text-slate-400
+                  border border-transparent
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-slate-400
+                  dark:focus:ring-slate-500
+                  transition
+                  px-4 py-3
+                '
               />
             </div>
 
@@ -83,25 +121,61 @@ const Login = ({ close, openSignUp }) => {
                 placeholder="Enter your Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className='bg-black/5 p-2 rounded-xl w-full'
+                className='
+                  w-full
+                  rounded-xl
+                  bg-gray-100
+                  dark:bg-slate-800
+                  dark:text-white
+                  dark:placeholder:text-slate-400
+                  border border-transparent
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-slate-400
+                  dark:focus:ring-slate-500
+                  transition
+                  px-4 py-3
+                '
               />
             </div>
 
             <div className="m-3">
               <button
                 type="submit"
-                className='bg-black text-white py-2 px-4 rounded-xl w-full'
+                className='
+                  w-full
+                  rounded-xl
+                  bg-black
+                  dark:bg-slate-100
+                  text-white
+                  dark:text-slate-900
+                  hover:bg-gray-800
+                  dark:hover:bg-white
+                  transition
+                  font-medium
+                  cursor-pointer
+                  py-3
+                '
               >
                 Login
               </button>
             </div>
 
             <div className="p-5 text-center">
-              <p>
+              <p 
+                className="text-sm text-gray-600 dark:text-slate-400"
+              >
                 Don't have an account?
                 <span
                   onClick={openSignUp}
-                  className='font-bold hover:underline cursor-pointer'
+                  className='
+                    ml-1
+                    cursor-pointer
+                    hover:underline
+                    text-black
+                    dark:text-white
+                    font-semibold
+                  '
                 >
                   Sign Up
                 </span>
