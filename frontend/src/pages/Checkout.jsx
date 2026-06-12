@@ -38,7 +38,7 @@ const Checkout = () => {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/orders",
+        "/api/orders",
         {
 
           method: "POST",

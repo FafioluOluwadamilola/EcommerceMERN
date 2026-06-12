@@ -14,7 +14,7 @@ const MyOrders = () => {
       try {
 
         const res = await fetch(
-          "http://localhost:5000/api/orders/my-orders",
+          "/api/orders/my-orders",
           {
             headers: {
               Authorization: `Bearer ${token}`

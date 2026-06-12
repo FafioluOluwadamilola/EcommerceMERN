@@ -28,7 +28,7 @@ export const CartProvider = ({ children }) => {
       try {
 
         const res = await fetch(
-          "http://localhost:5000/api/cart",
+          "/api/cart",
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -72,7 +72,7 @@ export const CartProvider = ({ children }) => {
 
       // 📡 Send product to backend
       const res = await fetch(
-        "http://localhost:5000/api/cart",
+        "/api/cart",
         {
           method: "POST",
 
@@ -121,7 +121,7 @@ export const CartProvider = ({ children }) => {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/cart/decrease/${productId}`,
+        `/api/cart/decrease/${productId}`,
         {
           method: "PATCH",
 
@@ -157,7 +157,7 @@ export const CartProvider = ({ children }) => {
     try {
 
       const res = await fetch(
-        `http://localhost:5000/api/cart/${productId}`,
+        `/api/cart/${productId}`,
         {
           method: "DELETE",
 
@@ -194,7 +194,7 @@ export const CartProvider = ({ children }) => {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/cart/clear",
+        "/api/cart/clear",
         {
           method: "DELETE",
 

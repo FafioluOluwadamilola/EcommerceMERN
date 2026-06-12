@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 
       try {
         // 🔹 Ask backend: "who is this user?"
-        const res = await fetch("http://localhost:5000/api/auth/profile", {
+        const res = await fetch("/api/auth/profile", {
           headers: {
             Authorization: `Bearer ${token}` // 🔐 send token
           }
