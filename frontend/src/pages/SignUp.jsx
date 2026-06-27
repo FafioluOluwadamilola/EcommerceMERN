@@ -90,10 +90,25 @@ const SignUp = ({ close, openLogin }) => {
           <form onSubmit={handleSignUp}>
             <div className='reg'>
               <label className='block text-sm font-medium'>Full Name</label>
-              <input className='bg-black/5 p-2  rounded-xl focus:outline-none focus:ring-2 focus:ring-black/40 focus:shadow-xl transition'
+              <input 
                 placeholder='Enter your Name'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                className='
+                  w-full
+                  rounded-xl
+                  bg-gray-100
+                  dark:bg-slate-800
+                  dark:text-white
+                  dark:placeholder:text-slate-400
+                  border border-transparent
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-slate-400
+                  dark:focus:ring-slate-500
+                  transition                  
+                  px-4 py-3
+                '
                 required
               />
 
